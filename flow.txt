@@ -1,0 +1,53 @@
+UI Component (e.g., UserProfile.jsx)
+   ↓ Calls
+Custom Hook (e.g., useUser.js)
+   ↓ Uses
+React Query (e.g., useQuery)
+   ↓ Calls
+API Function (e.g., userApi.js)
+   ↓ Uses
+Axios (e.g., axiosConfig.js)
+   ↓ Sends Request to
+Backend API
+..................
+src/
+│
+├── api/                  # Axios configuration and API functions
+│   ├── axiosConfig.js    # Axios instance and global configuration
+│   ├── authApi.js        # API functions related to authentication
+│   ├── userApi.js        # API functions related to user data
+│   └── ...               # Other API files (e.g., productApi.js, orderApi.js)
+│
+├── hooks/                # Custom hooks
+│   ├── useAuth.js        # Hook for authentication logic
+│   ├── useUser.js        # Hook for user data fetching
+│   └── ...               # Other custom hooks
+│
+├── components/           # Reusable UI components
+│   ├── common/           # Common components (e.g., Button, Input, Modal)
+│   ├── layout/           # Layout components (e.g., Header, Footer, Sidebar)
+│   └── ...               # Other component categories
+│
+├── pages/                # Page components
+│   ├── Home.jsx          # Home page
+│   ├── Login.jsx         # Login page
+│   ├── Dashboard.jsx     # Dashboard page
+│   └── ...               # Other pages
+│
+├── utils/                # Utility/helper functions
+│   ├── helpers.js        # General helper functions
+│   ├── validators.js     # Validation functions
+│   └── ...               # Other utility files
+│
+├── contexts/             # React contexts (if needed)
+│   ├── AuthContext.js    # Context for authentication
+│   └── ...               # Other contexts
+│
+├── styles/               # Global styles and CSS
+│   ├── global.css        # Global styles
+│   ├── theme.js          # Theme configuration (if using styled-components or Material-UI)
+│   └── ...               # Other style files
+│
+├── App.jsx               # Main application component
+├── main.jsx              # Entry point (renders App)
+└── index.css             # Base CSS file
